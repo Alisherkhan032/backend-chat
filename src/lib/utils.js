@@ -7,9 +7,9 @@ const generateToken = (userId, res) => {
 
     res.cookie('token', token, {
         maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
-        httpOnly: true, // Prevent XSS attacks
-        sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax', // Allow cross-site cookies
-        secure: process.env.NODE_ENV === 'production', // Only set cookie over HTTPS in production
+        httpOnly: true, // Prevents XSS
+        sameSite: "None", // Enables cross-origin cookies
+        secure: true // Required for HTTPS
     });
 
     return token;
