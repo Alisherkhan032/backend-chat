@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 
 const FRONTEND_URL = process.env.NODE_ENV === "production" 
-  ? "https://vartalaap-one.vercel.app/"  // Vercel domain
+  ? "https://vartalaap-one.vercel.app"  // Vercel domain
   : "http://localhost:5173"; //  local frontend port
 
   const io = new Server(server, {
