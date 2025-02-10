@@ -11,7 +11,7 @@ const {app, server} = require("./lib/socket");
 const PORT = process.env.PORT || 5001;
 
 const FRONTEND_URL = process.env.NODE_ENV === "production" 
-  ? "https://vartalaap-one.vercel.app"  // Vercel domain
+  ? "https://lingo-ali.vercel.app"  // Vercel domain
   : "http://localhost:5173"; //  local frontend port
 
 app.use(cors({
